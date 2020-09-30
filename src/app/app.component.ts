@@ -17,7 +17,10 @@ export class AppComponent {
   ngOnInit(){
     
     this.annuncioService.getAnnuncios().subscribe((res)=>{
+        
+      
         console.log(res);
+        
       }
     );
 

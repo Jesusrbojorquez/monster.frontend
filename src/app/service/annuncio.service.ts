@@ -17,6 +17,6 @@ export class AnnuncioService {
   
   public getAnnuncios(){
     return this.httpClient.get<AnnuncioDTO[]>(`${this.url}/annuncio/`);
-}
+  }
 
 }
