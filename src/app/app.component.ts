@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AnnuncioService } from './service/annuncio.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'monster-frontend';
+
+  constructor(private annuncioService: AnnuncioService){
+
+  }
+
+
+  ngOnInit(){
+    
+    this.annuncioService.getAnnuncios().subscribe((res)=>{
+        console.log(res);
+      }
+    );
+
+
+    
+
+  }
 }

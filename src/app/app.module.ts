@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { GearComponent } from './navbar/gear/gear.component';
 import { OptionsComponent } from './navbar/options/options.component';
 import { RicercaComponent } from './ricerca/ricerca.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,13 @@ import { RicercaComponent } from './ricerca/ricerca.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
