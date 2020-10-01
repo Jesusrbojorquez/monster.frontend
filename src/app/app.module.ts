@@ -7,8 +7,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { GearComponent } from './navbar/gear/gear.component';
 import { OptionsComponent } from './navbar/options/options.component';
-import { RicercaComponent } from './ricerca/ricerca.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MiddleComponent } from './middle/middle.component';
+import { RicercaComponent } from './middle/ricerca/ricerca.component';
+import { ListaComponent } from './middle/lista/lista.component';
+import { DetailComponent } from './middle/detail/detail.component';
+import { DetailheadComponent } from './middle/detail/detailhead/detailhead.component';
+import { DetailbodyComponent } from './middle/detail/detailbody/detailbody.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,12 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     GearComponent,
     OptionsComponent,
-    RicercaComponent
+    MiddleComponent,
+    RicercaComponent,
+    ListaComponent,
+    DetailComponent,
+    DetailheadComponent,
+    DetailbodyComponent
   ],
   imports: [
     BrowserModule,
