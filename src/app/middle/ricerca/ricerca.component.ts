@@ -8,18 +8,37 @@ import { AnnuncioService } from 'src/app/service/annuncio.service';
 })
 export class RicercaComponent implements OnInit {
 
+
+  
+  keyword:string;
+
+  listAnnuncios=[];
+
+  isHidden=true;
+
   constructor(private annuncioService: AnnuncioService) { }
 
   ngOnInit(): void {
 
-    this.annuncioService.getAnnunciosBykeyword("er").subscribe((res)=>{
-        
-      
-      console.log(res);
-      
-    }
-  );
+    
+  
+  }
 
+  onClickButton(){
+    if(this.keyword){
+
+      this.isHidden=true;
+      this.annuncioService.getAnnunciosBykeyword(this.keyword).subscribe((res)=>{
+        this.listAnnuncios=res;
+        console.log(this.listAnnuncios);
+      });
+      
+
+    }
+    else{
+      this.isHidden=false;
+    }
+    
   }
 
 }

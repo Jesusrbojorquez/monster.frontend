@@ -14,6 +14,7 @@ import { ListaComponent } from './middle/lista/lista.component';
 import { DetailComponent } from './middle/detail/detail.component';
 import { DetailheadComponent } from './middle/detail/detailhead/detailhead.component';
 import { DetailbodyComponent } from './middle/detail/detailbody/detailbody.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DetailbodyComponent } from './middle/detail/detailbody/detailbody.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
 

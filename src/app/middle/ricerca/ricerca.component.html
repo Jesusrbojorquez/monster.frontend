@@ -4,14 +4,15 @@
             <div class="form-row align-items-center">
                 <div class="col-auto">
                     <label class="sr-only" for="inlineFormInput">Parola chiave</label>
-                    <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Parola chiave (es: marketin o sviluppatore)">
+                    <input name="keyword" type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Parola chiave (es: marketin o sviluppatore) " [(ngModel)]="keyword">
                 </div>
                 <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-2">Ricerca</button>
+                    <button (click)="onClickButton()" type="submit" class="btn btn-primary mb-2">Ricerca</button>
                 </div>
             </div>
         </div>
         
       </form>
+      <p [hidden]="isHidden">Inserisci un valore per la ricerca</p>
   </div>
 

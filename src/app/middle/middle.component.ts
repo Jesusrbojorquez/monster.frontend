@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MiddleComponent implements OnInit {
 
+
+  listAnnuncios=[];
+  
   constructor() { }
 
   ngOnInit(): void {
