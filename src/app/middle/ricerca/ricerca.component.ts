@@ -12,7 +12,7 @@ export class RicercaComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.annuncioService.getAnnuncios().subscribe((res)=>{
+    this.annuncioService.getAnnunciosBykeyword("er").subscribe((res)=>{
         
       
       console.log(res);

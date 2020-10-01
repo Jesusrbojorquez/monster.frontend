@@ -19,4 +19,10 @@ export class AnnuncioService {
     return this.httpClient.get<AnnuncioDTO[]>(`${this.url}/annuncio/`);
   }
 
+
+  public getAnnunciosBykeyword(keyword:string){
+    return this.httpClient.get<AnnuncioDTO[]>(`${this.url}/annuncio/byDescrizione/${keyword}`);
+  }
+
+
 }
