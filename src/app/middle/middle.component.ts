@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnnuncioDTO } from '../model/annuncio-dto';
 
 @Component({
   selector: 'app-middle',
@@ -8,11 +9,21 @@ import { Component, OnInit } from '@angular/core';
 export class MiddleComponent implements OnInit {
 
 
-  listAnnuncios=[];
+  listAnnuncios;
   
   constructor() { }
 
   ngOnInit(): void {
+    console.log("padre");
+  }
+
+
+  ricerca(listAnnuncio :AnnuncioDTO[]) {
+   this.listAnnuncios=listAnnuncio;
+
+   console.log("arriva padre");
+
+   console.log(this.listAnnuncios);
   }
 
 }

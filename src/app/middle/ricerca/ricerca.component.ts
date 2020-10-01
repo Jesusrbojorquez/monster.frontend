@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AnnuncioDTO } from 'src/app/model/annuncio-dto';
 import { AnnuncioService } from 'src/app/service/annuncio.service';
 
 @Component({
@@ -8,11 +9,10 @@ import { AnnuncioService } from 'src/app/service/annuncio.service';
 })
 export class RicercaComponent implements OnInit {
 
-
+  @Output() getAnnuncios = new EventEmitter<AnnuncioDTO[]>();
   
   keyword:string;
 
-  listAnnuncios=[];
 
   isHidden=true;
 
@@ -29,8 +29,10 @@ export class RicercaComponent implements OnInit {
 
       this.isHidden=true;
       this.annuncioService.getAnnunciosBykeyword(this.keyword).subscribe((res)=>{
-        this.listAnnuncios=res;
-        console.log(this.listAnnuncios);
+        /* this.listAnnuncios=res; */
+        console.log(res);
+
+        this.getAnnuncios.emit(res);
       });
       
 
