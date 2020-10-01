@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnnuncioService } from 'src/app/service/annuncio.service';
 
 @Component({
   selector: 'app-ricerca',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RicercaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private annuncioService: AnnuncioService) { }
 
   ngOnInit(): void {
+
+    this.annuncioService.getAnnuncios().subscribe((res)=>{
+        
+      
+      console.log(res);
+      
+    }
+  );
+
   }
 
 }
