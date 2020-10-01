@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AnnuncioDTO } from 'src/app/model/annuncio-dto';
 
 @Component({
   selector: 'app-lista',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaComponent implements OnInit {
 
+  @Input('list') listAnnuncio:AnnuncioDTO[] ;
+
   constructor() { }
 
   ngOnInit(): void {
+
+    console.log("figlio");
+    
+    setTimeout(this.test, 10000);
   }
 
+
+  private  test(){
+    console.log(this.listAnnuncio)
+  }
 }
