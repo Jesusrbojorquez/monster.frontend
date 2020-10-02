@@ -1,5 +1,16 @@
-<app-ricerca (getAnnuncios)="ricerca($event)"></app-ricerca>
-
-<app-lista [list]="listAnnuncios"></app-lista>
-
-<app-detail></app-detail>
+<div class="container">
+    <app-ricerca (getAnnuncios)="ricerca($event)"></app-ricerca>
+    <hr>
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6">
+            <app-lista 
+            *ngFor="let listElement of listAnnuncios"
+            [elmnt]="listElement">
+                <h3>{{listElement.descrizione}}</h3>  
+            </app-lista>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6">
+            <app-detail></app-detail>
+        </div>
+    </div>
+</div>
